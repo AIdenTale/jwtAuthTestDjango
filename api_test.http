@@ -1,0 +1,22 @@
+### API > GET JWT TOKENS STATUS 200
+POST http://localhost:8000/api/get_token
+Content-Type: application/json
+
+{
+  "email": "user@mail.ru",
+  "password": 123456
+}
+
+### API > ACCESS TO SECRET URL WITH TOKEN STATUS 200
+GET http://localhost:8000/api/secret
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6bnVsbCwiaWF0IjoxNzA3NjA2OTUwLCJleHAiOjE3MDc2MDY5NzB9.TjHRR1DXnYq_gzBtbwGqjHTCPjPHWnjyx1HnIlzxC-M
+
+### API > REFRESH JWT TOKENS STATUS 200
+POST http://localhost:8000/api/refresh
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6bnVsbCwiaWF0IjoxNzA3NjA2OTUwLCJleHAiOjE3MDc2MDY5NzB9.TjHRR1DXnYq_gzBtbwGqjHTCPjPHWnjyx1HnIlzxC-M
+
+{
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDc2MDY5NTAsImV4cCI6MTcxMDE5ODk1MH0.4xWHLNpzc8m_OZbxYSwJhgMbqlb2yT5RuYPxTINtp2A"
+}

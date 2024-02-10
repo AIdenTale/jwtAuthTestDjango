@@ -1,0 +1,11 @@
+version: '3'
+services:
+  jwt-django-app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: jwt-django-app
+    environment:
+      - TZ="Europe/Moscow"
+    ports:
+      - 8000:8000
